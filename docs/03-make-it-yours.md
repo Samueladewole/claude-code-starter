@@ -99,8 +99,10 @@ The first two are a pair, and they are the habit worth forming first. Plan,
 get the plan corrected, then execute from it. Correcting a plan costs a
 paragraph.
 
-**Where to get more.** Anthropic ships a set with Claude Code, and there are
-large community collections on GitHub. Two cautions before you install a pack
+**Where to get more.** Anthropic ships a set with Claude Code. There is also a
+larger collection of mine at https://github.com/Samueladewole/claude-skills,
+which installs the same way and takes `--only` so you can take a handful
+rather than all of them. And there are large community collections on GitHub. Two cautions before you install a pack
 of several hundred: most are written for a stack that is not yours, and a skill
 with a loose description fires when you did not want it. Install a few, see
 which actually trigger on your work, delete the rest.
