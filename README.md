@@ -13,20 +13,35 @@ afternoon and changed the moment it stops fitting.
 
 ## Install
 
-```bash
-npm install -g @anthropic-ai/claude-code    # if you have not already
+Three commands. The third one does everything else.
 
+```bash
+npm install -g @anthropic-ai/claude-code
 git clone https://github.com/Samueladewole/claude-code-starter.git
-cd claude-code-starter
-./install.sh
+cd claude-code-starter && ./install.sh
 ```
 
-The installer backs up anything already in `~/.claude` before touching it, and
-merges into an existing `settings.json` rather than replacing it. Running it
-twice is safe.
+That gives you the rules, commands, agents and hooks in this repo, and pulls
+five skills from
+[claude-skills](https://github.com/Samueladewole/claude-skills), where the
+full collection of 380-odd lives. The installer prints exactly what landed, so
+you never have to guess whether it worked.
 
-Then open `~/.claude/CLAUDE.md` and answer the TODOs. That file is the highest
-return on time in the whole setup.
+It is safe to run twice. Anything it replaces is backed up to
+`~/.claude-backups/`, a `CLAUDE.md` you have edited is never overwritten, and
+an existing `settings.json` is merged rather than replaced.
+
+Nothing here aborts halfway. If Claude Code is not on your PATH yet, or you
+are offline, it installs what it can, tells you what it skipped, and fixes
+itself when you rerun.
+
+```bash
+./install.sh --no-skills     # config only
+./install.sh --help          # what the flags do
+```
+
+Then open `~/.claude/CLAUDE.md` and answer the TODOs. Ten minutes there beats
+every other file combined.
 
 ## What is in here
 
@@ -52,14 +67,15 @@ commands/             Typed as /name. Free until used.
   /build-fix            Fix build errors with minimal changes
   /security             OWASP-oriented audit
 
-skills/               Fire on their own when the work matches. No typing.
+skills/               Not in this repo — pulled from claude-skills so the
+                      same file never lives in two places. install.sh links
+                      five to begin with:
   writing-plans             Turn a vague task into a plan worth approving
-  executing-plans           Work through a plan task by task, verifying each
+  executing-plans           Work a plan task by task, verifying each
   verifying-before-done     Run the check and quote the output before
                             claiming something works
   debugging-systematically  Find the cause before changing code
-  reducing-entropy          Bias toward deletion; measure success by how
-                            little code is left
+  reducing-entropy          Bias toward deletion
 
 agents/               Specialists invoked for matching work.
   code-reviewer         Reviews changes for quality and maintainability

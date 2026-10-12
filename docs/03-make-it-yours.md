@@ -84,11 +84,11 @@ Skills are the right tool for knowledge that should apply every time a kind of
 work comes up, without you remembering to ask. Commands are better when you
 want to choose the moment.
 
-This starter ships five, all aimed at the ways AI-assisted work usually goes
-wrong rather than at any particular stack:
+`install.sh` links five to begin with, all aimed at the ways AI-assisted work
+usually goes wrong rather than at any particular stack:
 
 - `writing-plans` — turn a vague task into a plan worth approving
-- `executing-plans` — work through that plan task by task, verifying each one
+- `executing-plans` — work that plan task by task, verifying each one
 - `verifying-before-done` — run the check and quote the output before claiming
   something works
 - `debugging-systematically` — find the cause before changing code
@@ -99,10 +99,22 @@ The first two are a pair, and they are the habit worth forming first. Plan,
 get the plan corrected, then execute from it. Correcting a plan costs a
 paragraph.
 
-**Where to get more.** Anthropic ships a set with Claude Code. There is also a
-larger collection of mine at https://github.com/Samueladewole/claude-skills,
-which installs the same way and takes `--only` so you can take a handful
-rather than all of them. And there are large community collections on GitHub. Two cautions before you install a pack
+They are not files in this repo. They are symlinks into
+`~/.agents/skills`, which `install.sh` clones from
+[claude-skills](https://github.com/Samueladewole/claude-skills). One copy of
+each skill exists, so a `git pull` there updates every skill at once and
+nothing can drift out of step.
+
+To add more from that collection:
+
+```bash
+~/.agents/skills/install.sh --only name-of-skill another-skill
+~/.agents/skills/install.sh                 # link all 380-odd
+```
+
+**Where to get more.** Anthropic ships a set with Claude Code, including
+`pdf`, `docx`, `pptx` and `xlsx`, which you already have and do not need to
+install. Beyond that there are large community collections on GitHub. Two cautions before you install a pack
 of several hundred: most are written for a stack that is not yours, and a skill
 with a loose description fires when you did not want it. Install a few, see
 which actually trigger on your work, delete the rest.
