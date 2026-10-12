@@ -3,7 +3,7 @@
 A small, opinionated starting configuration for someone new to Claude Code, plus
 the guide I wish I had in week one.
 
-Six commands, six rule files, two skills, three agents, two hooks and three
+Six commands, six rule files, five skills, three agents, two hooks and three
 guides.
 
 Deliberately small. A large configuration you did not write is harder to use
@@ -53,9 +53,13 @@ commands/             Typed as /name. Free until used.
   /security             OWASP-oriented audit
 
 skills/               Fire on their own when the work matches. No typing.
+  writing-plans             Turn a vague task into a plan worth approving
+  executing-plans           Work through a plan task by task, verifying each
   verifying-before-done     Run the check and quote the output before
                             claiming something works
   debugging-systematically  Find the cause before changing code
+  reducing-entropy          Bias toward deletion; measure success by how
+                            little code is left
 
 agents/               Specialists invoked for matching work.
   code-reviewer         Reviews changes for quality and maintainability
@@ -90,4 +94,5 @@ The setup that helps you is the one you can still explain six months from now.
 
 ## Licence
 
-MIT. Take it, change it, keep nothing you do not use.
+MIT, see `LICENSE`. Everything here is original work. Take it, change it,
+keep nothing you do not use.

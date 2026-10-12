@@ -84,12 +84,20 @@ Skills are the right tool for knowledge that should apply every time a kind of
 work comes up, without you remembering to ask. Commands are better when you
 want to choose the moment.
 
-This starter ships two, both aimed at the ways AI-assisted work usually goes
+This starter ships five, all aimed at the ways AI-assisted work usually goes
 wrong rather than at any particular stack:
 
+- `writing-plans` — turn a vague task into a plan worth approving
+- `executing-plans` — work through that plan task by task, verifying each one
 - `verifying-before-done` — run the check and quote the output before claiming
   something works
 - `debugging-systematically` — find the cause before changing code
+- `reducing-entropy` — bias toward deletion; judge the result by how little
+  code is left, not how much was written
+
+The first two are a pair, and they are the habit worth forming first. Plan,
+get the plan corrected, then execute from it. Correcting a plan costs a
+paragraph.
 
 **Where to get more.** Anthropic ships a set with Claude Code, and there are
 large community collections on GitHub. Two cautions before you install a pack
