@@ -37,7 +37,7 @@ backup_if_present() {
 say "Installing into ${DEST}"
 
 # Directories: copied wholesale, existing versions backed up first.
-for d in rules commands agents hooks; do
+for d in rules commands agents hooks skills; do
   backup_if_present "$d"
   mkdir -p "${DEST}/${d}"
   cp -R "${SRC}/${d}/." "${DEST}/${d}/"

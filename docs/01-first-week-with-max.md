@@ -92,6 +92,9 @@ separates people who find this useful from people who find it frustrating.
 ## What to ignore for now
 
 Skills, hooks, MCP servers, subagents and custom commands are all real and all
-useful. None of them matter in week one. A large configuration you do not
-understand is worse than a small one you do. Grow it when something annoys you
-twice.
+useful. None of them need your attention in week one. The handful this starter
+installs work on their own without you learning anything about them first.
+
+A large configuration you do not understand is worse than a small one you do.
+Grow it when something annoys you twice, and read docs/03-make-it-yours.md when
+that happens.

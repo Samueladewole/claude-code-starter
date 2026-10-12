@@ -3,6 +3,9 @@
 A small, opinionated starting configuration for someone new to Claude Code, plus
 the guide I wish I had in week one.
 
+Six commands, six rule files, two skills, three agents, two hooks and three
+guides.
+
 Deliberately small. A large configuration you did not write is harder to use
 than no configuration at all, because you cannot tell which part is responsible
 when something behaves oddly. Everything here is meant to be read in an
@@ -49,6 +52,11 @@ commands/             Typed as /name. Free until used.
   /build-fix            Fix build errors with minimal changes
   /security             OWASP-oriented audit
 
+skills/               Fire on their own when the work matches. No typing.
+  verifying-before-done     Run the check and quote the output before
+                            claiming something works
+  debugging-systematically  Find the cause before changing code
+
 agents/               Specialists invoked for matching work.
   code-reviewer         Reviews changes for quality and maintainability
   security-reviewer     Flags secrets, injection, auth gaps
@@ -61,7 +69,7 @@ hooks/                Run automatically, not by Claude's choice.
 docs/
   01-first-week-with-max.md   All five places Claude lives, and what each is for
   02-working-well.md          The ten corrections that matter most
-  03-make-it-yours.md         Adding commands, rules, hooks, MCP servers
+  03-make-it-yours.md         Adding commands, rules, skills, hooks, MCP servers
 ```
 
 ## Read in this order

@@ -11,6 +11,7 @@ configuration.
 <project>/CLAUDE.md          every session, in that project
 ~/.claude/rules/*.md         referenced from CLAUDE.md
 ~/.claude/commands/*.md      only when you type /name
+~/.claude/skills/*/SKILL.md  only when the work matches the description
 ~/.claude/agents/*.md        only when a task matches, or you ask
 ~/.claude/hooks/*            automatically, on the events you wire them to
 ```
@@ -52,6 +53,52 @@ Point at them from CLAUDE.md with one line each:
 ```markdown
 See `~/.claude/rules/testing.md` for test requirements.
 ```
+
+## Adding a skill
+
+A skill is a folder in `~/.claude/skills/` holding a `SKILL.md`. The frontmatter
+carries a `name` and a `description`, and the body is instructions.
+
+```markdown
+---
+name: reviewing-migrations
+description: Use when writing or reviewing a database migration, before it runs
+  anywhere — checks reversibility, locking, and data loss.
+---
+
+# Reviewing Migrations
+
+Before any migration is applied:
+
+1. Can it be reversed? If not, say so explicitly and explain why.
+2. Will it lock a large table? Name the table and estimate the row count.
+3. Does it drop or narrow a column? That is data loss. Confirm it is intended.
+```
+
+**The difference from a command is who invokes it.** You type `/plan`. A skill
+fires on its own, when the work matches its `description`. That makes the
+description the most important line in the file: it is not documentation, it is
+the trigger. Write it as "Use when…" and name the situation concretely.
+
+Skills are the right tool for knowledge that should apply every time a kind of
+work comes up, without you remembering to ask. Commands are better when you
+want to choose the moment.
+
+This starter ships two, both aimed at the ways AI-assisted work usually goes
+wrong rather than at any particular stack:
+
+- `verifying-before-done` — run the check and quote the output before claiming
+  something works
+- `debugging-systematically` — find the cause before changing code
+
+**Where to get more.** Anthropic ships a set with Claude Code, and there are
+large community collections on GitHub. Two cautions before you install a pack
+of several hundred: most are written for a stack that is not yours, and a skill
+with a loose description fires when you did not want it. Install a few, see
+which actually trigger on your work, delete the rest.
+
+If you want to write your own and want help with the format, ask Claude to use
+the `skill-creator` skill, which ships with Claude Code.
 
 ## Adding a hook
 
