@@ -47,6 +47,7 @@ simple, move down. That is the whole heuristic.
 ## Day three: Claude Code
 
 ```bash
+node --version                             # need 18+; install from nodejs.org
 npm install -g @anthropic-ai/claude-code
 cd ~/some/real/project
 claude

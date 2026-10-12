@@ -11,6 +11,19 @@ than no configuration at all, because you cannot tell which part is responsible
 when something behaves oddly. Everything here is meant to be read in an
 afternoon and changed the moment it stops fitting.
 
+## Before you start
+
+You need two things:
+
+- **A Claude account** on a paid plan (Pro or Max). Claude Code signs in with
+  it; there is no API key to set up and no separate bill.
+- **Node.js 18 or newer**, which is what provides `npm`. Check with
+  `node --version`. If that says "command not found", install it from
+  [nodejs.org](https://nodejs.org) or, on a Mac with Homebrew,
+  `brew install node`.
+
+Git is already on macOS and most Linux systems. On Windows, use WSL.
+
 ## Install
 
 Three commands. The third one does everything else.
